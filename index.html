@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Light Switch</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="container">
+			<p>Good Night</p>
+			<div class="switch-box">
+				<input type="checkbox" id="dark-toggle" class="hidden" />
+				<label for="dark-toggle">
+					<div class="slider">
+						<div class="toggle"></div>
+					</div>
+				</label>
+			</div>
+		</div>
+
+		<script>
+			const darkToggle = document.querySelector('#dark-toggle');
+			const html = document.querySelector('html');
+			const btn = document.querySelector('.toggle');
+
+			darkToggle.addEventListener('click', () => {
+				html.classList.toggle('dark');
+				btn.classList.toggle('move');
+			});
+		</script>
+	</body>
+</html>
